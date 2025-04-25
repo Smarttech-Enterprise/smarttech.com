@@ -1,0 +1,598 @@
+* General */
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+.contenido, main
+{ margin-top: 60px;
+
+}
+
+
+
+/* Fondo y colores */
+body { 
+    background-image: url();
+    font-family: 'ROBOTO' sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    color: rgb(3, 3, 3);
+    line-height: 1.8;
+}
+
+/* Navegación */
+header {
+    background-color: #FFB6C1; /* Rosado claro */
+    padding: 10px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    background: rgba(255, 192, 203, 0.3); /* Rosado pastel translúcido */
+    backdrop-filter: blur(10px); /* Efecto vidrio */
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 192, 203, 0.4);
+    box-shadow: 0 8px 16px rgba(140, 93, 93, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 30px;
+    border-radius: 0 0 10px 10px;
+    animation: fadeInDown 0.8s ease-out;
+  }
+  
+  
+
+
+nav ul {
+    
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 15px; /* Espaciado entre los enlaces */
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #ffc0cb, #ffb6c1); /* Gradiente rosado pastel */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+nav a {
+    background: linear-gradient(145deg, #ff99b0, #ffb6c1); /* Cambia a rosado más fuerte */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    color: #ffffff;
+
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+transition: background 0.3s;
+
+      
+}
+
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+.logo {
+    width: 100px;
+    height: auto;
+}
+.formulario {
+    background-image: url(fondo3.jpg);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+.formulario input, .formulario select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    background-color: #f56de7;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #f565e2;
+}
+
+/* Sección Hero */
+.hero {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    background-image: url();/* <--- Fondo blanco para la sección */
+    color: rgb(3, 3, 3);
+    min-height: 80vh;
+    text-align: center;
+}
+
+/* Caja de bienvenida */
+.welcome-box {
+    
+    background-color: rgba(245, 245, 220, 0.868); /* <--- Fondo beige solo para la caja */
+    padding: 80px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    color: #333;
+    margin-top: -50px; /* Texto oscuro para contraste */
+}
+
+  
+  button:hover, .btn:hover {
+    background-color: #FF3385; /* color más oscuro al pasar el cursor */
+  }
+/* Botones */
+.btn {
+    /* rosado brillante */
+    background: linear-gradient(135deg, #ffc0cb, #ffb6c1); /* Gradiente rosado pastel */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 8px 16px rgba(255, 182, 193, 0.4), 
+                0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra doble */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+
+.btn:hover {
+        background: linear-gradient(135deg, #ffc0cb, #ffb6c1); /* Gradiente rosado pastel */
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 40px;
+        box-shadow: 0 8px 16px rgba(255, 182, 193, 0.4), 
+                    0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra doble */
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      /* Efecto de luz al pasar el mouse */
+      .boton-glow::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: skewX(-20deg);
+      }
+      
+      /* Animación de brillo */
+      .boton-glow:hover::before {
+        animation: shine 0.7s ease-in-out;
+      }
+      
+      .boton-glow:hover {
+        transform: scale(1.05); /* Agranda un poquito */
+        box-shadow: 0 10px 25px rgba(255, 182, 193, 0.5);
+      }
+      
+      @keyframes shine {
+        from {
+          left: -75%;
+        }
+        to {
+          left: 125%;
+        }
+      }
+
+
+/* Pie de Página */
+footer {
+    background-color: #FFB6C1;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%; height: 5%;
+}
+/* Sección de Servicios */
+#servicios {
+    background-image: url(fondo3.jpg);
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#servicios h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(2, 2, 2);
+}
+
+/* Contenedor de las tarjetas */
+.servicios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Tarjetas de servicio */
+.servicio-card {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconos en las tarjetas */
+.icono {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #f198ef;
+    transition: color 0.3s;
+}
+
+.servicio-card:hover .icono {
+    color: #f09de9;
+}
+
+/* Títulos y párrafos */
+.servicio-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: rgb(5, 5, 5);
+}
+
+.servicio-card p {
+    font-size: 1em;
+    color: #666;
+}
+/* Animación suave de aparición */
+.servicio-card {
+    opacity: 0;
+    animation: aparecer 0.6s forwards;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    #quienes-somos
+{
+   
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+#quienes-somos h2 {
+
+    font-size: 2.5em;
+    color: #f369d9;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Párrafos de la sección */
+#quienes-somos p {
+
+    font-size: 1.1em;
+    color: rgb(6, 6, 6);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Títulos secundarios (Misión, Visión, etc.) */
+#quienes-somos h3 {
+    font-size: 1.8em;
+    color: #ef6cc8;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Estilos para el equipo */
+#equipo {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#equipo h2 {
+    font-size: 2.5em;
+    color: rgb(2, 2, 2);
+    margin-bottom: 20px;
+}
+
+.miembros-equipo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.miembro {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.miembro:hover {
+    transform: scale(1.05);
+}
+
+.foto-equipo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Estilos para los valores */
+#valores {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#valores h2 {
+    font-size: 2.5em;
+    color: rgb(10, 10, 10);
+    margin-bottom: 20px;
+}
+
+#valores ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+#valores li {
+    font-size: 1.2em;
+    color: rgb(8, 8, 8);
+    margin-bottom: 15px;
+}
+
+/* Estilos para los testimonios */
+#testimonios {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#testimonios h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.testimonio {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.testimonio p {
+    font-size: 1.1em;
+    color: #666;
+}
+* Estilos para la sección Ahorro */
+#ahorro {
+   
+    background-color: #e8f5e9;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#ahorro h2 {
+    font-size: 2.5em;
+    color: #f96fcf;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#ahorro p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#ahorro h3 {
+    font-size: 2em;
+    color: #f690ca;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+#ahorro ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 20px;
+}
+
+#ahorro li {
+    margin-bottom: 15px;
+}
+
+
+body {
+    background-image: url(fondo3.jpg);
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdebe9;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+.form-container {
+    
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #fff3f3;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #d96c8f;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    color: #8b5e5e;
+    font-weight: bold;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #f4cccc;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #f197b0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e57897;
+  }.mensaje-exito {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+    display: none;
+  }
+
+  .mensaje-exito.mostrar {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }

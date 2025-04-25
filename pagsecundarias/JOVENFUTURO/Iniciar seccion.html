@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario - Joven Futuro</title>
+  <link rel="stylesheet" href="Jovenfuturo.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+       
+            <img src="joven logo 5.png"  class="logo small">
+           <ul>
+            <li><a href="BIENVENIDA JOVEN.HTML">Inicio</a></li>
+            <li><a href="servicios joven.html">Servicios</a></li>
+                <li><a href="prestamosjovenfuturo.html">Prestamos</a></li>
+                <li><a href="ahorrosfuturo.html">Ahorros</a></li>
+                
+                
+            </ul>
+
+                                                                                                                                                                      
+        </nav>
+    </header>
+    
+    </head>
+    <body>
+      <div class="form-container">
+        <h2>Formulario Joven Futuro</h2>
+    
+        <form id="formulario">
+          <label for="nombre">Nombre completo del estudiante</label>
+          <input type="text" id="nombre" name="nombre" required>
+    
+          <label for="matricula">Matrícula universitaria</label>
+          <input type="text" id="matricula" name="matricula" required>
+    
+          <label for="universidad">Universidad</label>
+          <input type="text" id="universidad" name="universidad" required>
+    
+          <label for="carrera">Carrera universitaria</label>
+          <input type="text" id="carrera" name="carrera" required>
+    
+          <label for="correo">Correo institucional o personal</label>
+          <input type="email" id="correo" name="correo" required>
+    
+          <label for="telefono">Teléfono de contacto</label>
+          <input type="tel" id="telefono" name="telefono" required>
+    
+          <label for="tipo">Tipo de servicio solicitado</label>
+          <select id="tipo" name="tipo">
+            <option value="ahorro">Cuenta de Ahorro Estudiantil</option>
+            <option value="prestamo">Solicitud de Préstamo Educativo</option>
+          </select>
+    
+          <label for="monto">Monto estimado (solo si solicita préstamo)</label>
+          <input type="number" id="monto" name="monto" placeholder="Ej: 5000">
+    
+          <label for="comentario">¿Por qué deseas unirte a la cooperativa?</label>
+          <textarea id="comentario" name="comentario" rows="4" placeholder="Cuéntanos brevemente..."></textarea>
+    
+          <button type="submit">Enviar Solicitud</button>
+        </form>
+    
+        <div id="mensaje-exito" class="mensaje-exito">
+          ¡Tus datos fueron enviados exitosamente!
+        </div>
+      </div>
+    
+      <script>
+        const formulario = document.getElementById('formulario');
+        const mensajeExito = document.getElementById('mensaje-exito');
+    
+        formulario.addEventListener('submit', function(e) {
+          e.preventDefault(); // Evita el envío realdisplay = 'block'; // Muestra el mensaje
+      mensajeExito.classList.add('mostrar'); // Añade animación
+      formulario.reset(); // Limpia el formulario
+
+    
+    });
+  </script>
+</body>
+</html>

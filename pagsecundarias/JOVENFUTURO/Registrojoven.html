@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - Joven Futuro</title>
+  <link rel="stylesheet" href="Jovenfuturo.css">
+  
+</head>
+<body>
+  <header>
+    <nav>
+        <img src=""  class="logo small">
+        <ul><li><a href="BIENVENIDA JOVEN.HTML">inicio</a></li>
+          <li><a href="servicios joven.html">servicios</a></li>
+            <li><a href="prestamosjovenfuturo.html">Prestamos</a></li>
+            <li><a href="ahorrosfuturo.html">Ahorros</a></li>
+            
+           
+
+                                                                                                                                                                  
+    </nav>
+</header>
+
+<section class="login">
+  <h2>Iniciar Sesión</h2>
+  <form id="loginForm">
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario" required>
+
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" required>
+
+    <a href="dashboard.html" class="boton-entrar">Entrar</a>
+    <p id="mensajeLogin"></p>
+  </form>
+</section>
+
+<!-- PIE DE PÁGINA -->
+<footer class="contacto">
+  Teléfono: +1 (829)317-4782
+  Correo: jovenfuturocoop@gmail.com
+  &copy; 2025 Smart Tech Software Solutions
+</footer>
+
+<!-- SCRIPT PARA VALIDAR LOGIN -->
+<script>
+
+  const usuariosValidos = {
+    "fernanda": "1234",
+    "Ashley": "abcd",
+    "jaffreisy": "clave123"
+  };
+
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const usuario = document.getElementById("usuario").value;
+    const contrasena = document.getElementById("contrasena").value;
+    const mensaje = document.getElementById("mensajeLogin");
+
+    if (usuariosValidos[usuario] === contrasena) {
+      mensaje.style.color = "black";
+      mensaje.textContent = "¡Inicio de sesión exitoso!";
+      setTimeout(() => {
+        window.location.href = "dashboard.html";
+      }, 1000);
+    } else {
+      mensaje.style.color = "red";
+      mensaje.textContent = "Usuario o contraseña incorrectos.";
+    }
+  }); 
+</script>
+
+<style>
+
+  .boton-entrar {
+    background: linear-gradient(135deg, #ffc0cb, #ffb6c1); /* Gradiente rosado pastel */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 8px 16px rgba(255, 182, 193, 0.4), 
+                0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra doble */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  .boton-entrar:hover {
+    background-color: #d16ca5;
+  }
+
+body {
+  background-image: url(fondo3.jpg);
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff6f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #e68cb9;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #d16ca5;
+}
+
+/* LOGIN */
+.login {
+  background-color: #f9e6f0;
+  padding: 30px;
+  border-radius: 10px;
+  width: 320px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login h2 {
+  margin-bottom: 20px;
+}
+
+a.button {
+  background-color: #e68cb9;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #d16ca5;
+  background-color: #e68cb9;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+/* PIE DE PÁGINA */
+footer.contacto {
+  background-color: #fbeaea;
+  color: #444;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 14px;
+  margin-top: 50px;
+  border-top: 2px solid #e68cb9;
+}
+
+footer.contacto a {
+  color: #e68cb9;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+footer.contacto a:hover {
+  text-decoration: underline;
+}
+ 
+</style>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="proyectos.css">
+  <title>Página de Artículos con Carrusel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e7e7e79b;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .articulo {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+      border-radius: 50%;
+    }
+
+    .btn.prev {
+      left: 10px;
+    }
+
+    .btn.next {
+      right: 10px;
+    }
+
+    .contenido {
+      padding: 15px;
+    }
+
+    .contenido h3 {
+      margin: 0 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .contenedor {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+.footer .logo h2, .footer p{
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>Smart tech Software Solutions</strong></div>
+    <nav>
+      <a href="/CiberPoint/index.html">Inicio</a>
+      <a href="/CiberPoint/Nosotros.html">Nosotros</a>
+      <a href="https://wa.me/qr/H4I4DMFO63X5F1">Contacto</a>
+    </nav>
+  </header>
+  <h2 class="titulo-pagina"><font face="Trebuchet MS"> <center>Proyectos Smart Tech</center></font></h2>
+
+  <div class="contenedor">
+    <!-- Artículos 1 al 6 -->
+    <!-- Puedes personalizar imágenes y textos según necesites -->
+    <!-- Artículo 1 -->
+    <div class="articulo">
+      <div class="slider">
+        <div class="slides">
+          <img src="/CiberPoint/pagsecundarias/JOVENFUTURO/producto.jpeg" alt="producto">
+          <img src="/CiberPoint/pagsecundarias/JOVENFUTURO/bienvenida.jpeg" alt="bienvenida">
+          <img src="/CiberPoint/pagsecundarias/JOVENFUTURO/ahorro.jpeg" alt="ahorro">
+        </div>
+        <button class="btn prev">&#10094;</button>
+        <button class="btn next">&#10095;</button>
+      </div>
+      <div class="contenido">
+        <h3>Joven futuro <u> <a href="/CiberPoint/pagsecundarias/JOVENFUTURO/BIENVENIDA JOVEN.HTML">Website</a></u></h3>
+        <p>Una plataforma financiera para estudiantes con grandes sueños.
+        </p>
+        <button class="learn-more">
+          <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+          </span>
+          <a href="/CiberPoint/pagsecundarias/JOVENFUTURO/BIENVENIDA JOVEN.HTML"><span class="button-text">Ver mas</span></a>
+        </button>
+      </div>
+    </div>
+    <!-- Artículo 2 -->
+    <div class="articulo">
+      <div class="slider">
+        <div class="slides">
+          <img src="/CiberPoint/img/SRprincipal.jpeg" alt="">
+          <img src="/CiberPoint/img/SR2.jpeg" alt="">
+          <img src="/CiberPoint/img/SR3.jpeg" alt="">
+        </div>
+        <button class="btn prev">&#10094;</button>
+        <button class="btn next">&#10095;</button>
+      </div>
+      <div class="contenido">
+        <h3>Sorisas & sabores</h3>
+        <p>Sonrisas & sabores es un sitio web donde puedes ordenar y desgustar de tus postres y bebidas favoritas.</p>
+        <button class="learn-more">
+          <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+          </span>
+          <a href="https://680ab1bcc9f5738cff81e6b2--euphonious-alpaca-6d3f73.netlify.app/"><span class="button-text">Ver mas</span></a>
+        </button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="logo">
+        <h2>Smart <span>Tech</span></h2>
+    </div>
+    <p>Todos los derechos reservados Smart Tech software Solutions LTD <span class="fecha"></span>  &copy; Desarrollo por Smart Tech Group Y Asociados</p>
+</footer>
+
+  <script>
+    document.querySelectorAll('.articulo').forEach(articulo => {
+      const slides = articulo.querySelector('.slides');
+      const images = slides.querySelectorAll('img');
+      const prevBtn = articulo.querySelector('.prev');
+      const nextBtn = articulo.querySelector('.next');
+      let index = 0;
+
+      function showSlide(i) {
+        index = (i + images.length) % images.length;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        showSlide(index - 1);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        showSlide(index + 1);
+      });
+    });
+  </script>
+
+</body>
+</html>
